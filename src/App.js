@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import Nightmare from './unkillablenightmare';
+import {useState} from 'react';
+import { Howl } from 'howler';
+import React from 'react';
+import Haaaiiiiii from './kirb SVG media/Haaaiiiiii.mp3'
 
 function App() {
+  const [isHovered, setIsHovered] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
+  const hai = new Howl({
+    src: Haaaiiiiii,
+    volume: 0.35,
+    loop: false, 
+  });
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Nightmare isHovered={isHovered} setIsHovered={setIsHovered} isClicked={isClicked} setIsClicked={setIsClicked} hai={hai}
+      />
     </div>
   );
 }

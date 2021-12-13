@@ -28,11 +28,66 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+
+.left_arm_move{
+  animation: leftArmMove 0.5s linear 0s 2;
+}
+@keyframes leftArmMove {
+  0% {
+    transform: rotate(0deg) translate(0px, 0px);
   }
-  to {
-    transform: rotate(360deg);
+  25% {
+    transform: rotate(10deg) translate(60px, -130px);
+  }
+  50% {
+    transform: rotate(0deg) translate(0px, 0px);
+  }
+  75% {
+    transform: rotate(10deg) translate(60px, -130px);
+  }
+  100% {
+    transform: rotate(0deg) translate(0px, 0px);
+  }
+}
+.right_arm_move{
+  animation: rightArmMove 0.5s linear 0s 2;
+}
+@keyframes rightArmMove {
+  0% {
+    transform: rotate(0deg) translate(0px, 0px);
+  }
+  25% {
+    transform: rotate(-10deg) translate(-50px, -20px);
+  }
+  50% {
+    transform: rotate(0deg) translate(0px, 0px);
+  }
+  75% {
+    transform: rotate(-10deg) translate(-50px, -20px);
+  }
+  100% {
+    transform: rotate(0deg) translate(0px, 0px);
+  }
+}
+.BouncyKirb {
+  animation: bouncyKirb 2s linear 0s 2;
+  cursor: pointer;
+}
+@keyframes bouncyKirb {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
